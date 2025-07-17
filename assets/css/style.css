@@ -171,6 +171,7 @@ footer {
 
   .nav-links.active {
     display: flex;
+    background-color: #000;
   }
 
   .desktop-only {
