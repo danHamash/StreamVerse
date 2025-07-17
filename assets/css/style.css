@@ -49,6 +49,7 @@ body {
   gap: 20px;
 }
 .nav-links li a {
+  font-size: 1.5rem;
   color: white;
   text-decoration: none;
 }
@@ -177,6 +178,9 @@ footer {
   }
   .mobile-only {
     display: inline-block;
+  }
+  .hero h1{
+    font-size: 1.5rem;
   }
 
 }
