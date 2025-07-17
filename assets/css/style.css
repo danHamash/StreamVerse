@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  background: #000;
+  overflow-x: hidden;
+}
+#bg-video {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.4);
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+/* Oculta o menu hambúrguer no desktop */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Navegação */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+}
+.btn-projetor {
+  background: red;
+  padding: 10px 20px;
+  border-radius: 50px;
+  box-shadow: 0 0 10px red, 0 0 20px red;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 150px 20px 80px;
+}
+.hero h1 {
+  font-size: 3.5em;
+}
+.hero p {
+  margin: 10px 0 50px 0;
+  font-size: 1.3em;
+}
+
+/* Carrossel */
+.carousel-section {
+  padding: 60px 20px;
+}
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px 40px;
+  scroll-behavior: smooth;
+}
+.card {
+  min-width: 200px;
+  background: #222;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  position: relative;
+  
+}
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+.card span {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-weight: bold;
+}
+.card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px red;
+  cursor: pointer;
+}
+
+/* Contato */
+.contato {
+  padding: 60px 20px;
+  background: #00000096;
+  text-align: center;
+}
+.contato h2{
+    margin-bottom: 1rem;
+}
+.contato form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contato input, .contato textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+.contato button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #00000096;
+  font-size: 0.9em;
+}
+
+.mobile-only { display: none; }
+.desktop-only { display: inline-block; }
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    text-align: center;
+    background: rgba(0,0,0,0.8);
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+  .mobile-only {
+    display: inline-block;
+  }
+
+}
